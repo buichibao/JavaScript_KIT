@@ -1,0 +1,22 @@
+body>div{
+    width: 30%;
+    height: auto;
+    background-color: rgb(164, 220, 121);
+    color: rgb(132, 68, 4);
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 20px;
+}
+li{
+    margin-left: 20px;
+}
+
+div>div{
+    width: 90%;
+    background-color: brown;
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}

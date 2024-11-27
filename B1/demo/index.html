@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ABC</h1>
+
+
+    <!-- External -->
+    <script src="main.js"></script>
+
+    <!-- Embed -->
+    <script>
+        // Code JS
+        // Quy tắc:
+        // - Phân biệt chữ hoa và thường
+        // - Bỏ qua ký tự cách dư thùa
+        /* Chú thích nhiều dòng */
+
+        // Biến dùng để lưu trữ 1 giá trị bất kỳ
+        // Cú pháp: var|let|const Tên_biến;
+        // Quy tắc đặt tên biến:
+        /*  - Chứa chữ, số, _, $
+            - Bắt đầu bằng chữ, _, $
+            - Tên biến có phân biệt hoa thường
+            - Những từ khóa của JS không đc trùng vs tên
+        */
+        // Chưa biết giá trị của biến
+        // Khai báo biến trước   
+        let so_1, so$2;
+        let _if;
+        // Khởi tạo giá trị cho biến sau
+        _if = 10;
+
+        // Đã biết giá trị của biến
+        // Khai báo và khởi tạo biến lun
+        let so3 = 5;
+
+
+        // Từ khóa var: phạm vi toàn cục (Chỉ nên dùng với những dự án sử dụng trình duyệt cũ từ 2015 trở về trc)
+        // Gán lại
+        var so4 = 10;
+        so4 = 5;
+        // Khai báo lại
+        var so4 = 8;
+
+        // Từ khóa let: phạm vi khối block
+        // Gán lại cho phép
+        let so5 = 10;
+        so5 = 2;
+        // Không cho khai báo lại
+        let so5;
+
+        // Từ khóa const được dùng cho biến có giá trị khổng đổi
+        // Ko cho gán lại và khai báo lại;
+        const so6 = 10;
+        so6 = 11;
+
+        // 8 kiểu dữ liệu trong js
+        /*
+            - String
+            - Number (bao gồm cả số nguyên và số thực)
+            - BigInt (số nguyên có giá trị lớn)
+            - Boolean (true hoặc false)
+            - Symbol (dùng để nghiên cứu)
+            - Underfined
+            - Null
+            - Object : 
+                + Object
+                + Array
+                + Date
+        */
+
+        // Kiểu dữ liệu String
+        // Có 3 cách để dùng string : '', "", ``
+        let str1 = 'Hello world'; // Chuỗi bt
+        let str2 = "I'm Kha"; // Chuỗi có thêm dấu '
+        // Dùng `` khi muốn đứa giá trị bất kỳ vào trong chuỗi
+        let str3 = `Hello, ${str2}`;  // Hello, I'm Kha
+
+        // Sử dụng ký tự đặc biệt sử dụng thêm \ ở trc. (\t: tab, \n: xuống hàng)
+        let str4 = "\"HIHI\"";
+
+        // Kiểu số Number
+        // Phạm vi từ -(2^53 - 1) đến 2^53 - 1
+        let num1 = 4e10; // 10 số 0.
+        let num2 = 5.15;
+
+        // Kiểu số BigInt : được sủ dụng với số nguyên vượt quá phạm vi của Number
+        // Kiểu này sẽ có chữ n phía cuối của giá trị
+        let num3 = 91829038120938120938901238n;
+
+        // Kiểu boolean
+        // Kiểu underfine
+        // Khi biến chưa đc khởi tạo mà sử dụng 
+        // Khi biến đã được khởi tạo nhưng không có giá trị
+        let num4;
+
+        // Kiểu Null: giá trị bị rỗng 
+        let num5 = null;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // HÀM XUẤT DỮ LIỆU
+        // document.write(Dữ liệu) : render dữ liệu ra body của html và nằm dưới thẻ script đang code
+        document.write('hello world');
+        document.write('<h1>Hello World</h1>');
+
+        // window.alert(Dữ liệu): tạo 1 popup mặc định để thông báo
+        window.alert('Hihi');
+        alert('Hehe');
+
+        // console.log(Dữ liệu): hiển thị ở tab console của devtool(f12) trong trình duyệt
+        // Thường dùng cho dev dùng để kiểm tra dữ liệu
+        console.log('Gì đây ba');
+
+        // HÀM NHẬP DỮ LIỆU
+        // Sử dụng hàm prompt([Thông báo hiển thị]): tạo ra 1 popup cho phép nhập dữ liệu đầu vào
+        // Hàm này sẽ trả về cho mình 1 giá trị kiểu string
+        prompt();
+        prompt('Nhập vào tên của bạn');
+        
+        // HÀM XÁC THỰC LỰA CHỌN
+        // Sử dụng hàm confirm([Thông báo hiển thị]): tạo ra 1 pop bao gồm 2 giá trị OK và cancel
+        // Khi chọn OK thì là hàm này trả về True, ngược lại là trả về False
+        confirm();
+        confirm('Bạn có chắc chắn muốn xóa ?');
+    </script>
+</body>
+</html>
