@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ÉP KIỂU NGẦM ĐỊNH (TỰ ĐỘNG ÉP KIỂU)
+        // Ép về chuỗi => chỉ cần cộng giá trị đó với chuỗi sẽ tạo ra chuỗi mới
+        let var1 = true;
+        console.log(Number(var1)); // 1
+        
+        let var2 = 10;
+        console.log('NGuyễn Văn A' + var1); // ra chuỗi mơí
+        console.log('' + var2); // '10'
+
+        // ÉP KIỂU TƯỜNG MINH (ÉP KIỂU THỦ CÔNG)
+        // ép từ số thành chuỗi dùng hàm String(giá trị);
+        let var3 = 5;
+        console.log(String(var3)); // '5'
+        // Hàm kiểm tra kiểu dữ liệu của biến (typeof(biến))
+        console.log(typeof(var3)); // Number
+
+        // ép chuỗi thành số dùng hàm Number(giá_trị_chuỗi); => logic cái giá trị chuỗi nó là số
+        console.log(Number('Heelo world')); // NaN
+        console.log(Number('5')); // 5
+
+        // ép kiểu array sang string dùng toString() : tên_mảng.toString();
+        const arr1 = ['Hihi', 'Haha', 'Huhu'];
+        console.log(arr1.toString()); // 'Hihi,Haha,Huhu'
+        
+        // ép kiểu string sang array dùng split(ký tự tách ra từng giá trị trong mảng); 
+        let name1 = 'Nguyễn Văn Tèo';
+        const arr2 = name1.split(" "); // ['Nguyễn', 'Văn', 'Tèo'];
+        console.log(arr2);
+    </script>
+</body>
+</html>

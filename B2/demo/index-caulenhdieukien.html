@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Được sử dụng làm những công việc khác nhau dựa trên các điều kiện khác nhau
+        // Chỉ dùng khi điều kiện đúng: if(điều kiên) { xử lý }
+        // LƯU Ý: điều kiện bao gồm : toán tử so sánh, giá trị boolean, biểu thức xử lý trả về boolean, hàm trả về boolean
+        if(5 > 2) { console.log('OK'); }
+        if(5 > 2) console.log('OK');
+
+        // Nếu có thêm trường hợp ngược lại dùng thêm else {}
+        if(5 > 2) { console.log('OK'); }
+        else { console.log('SAI'); }
+
+        // Nếu có thêm nhiều điều kiện thì dùng if else if(điều kiện) {}
+        let diemtb;
+        if(diemtb >= 8) { console.log('Giỏi'); }
+        else if(diemtb >= 6.5) { console.log('Khá'); }
+        else if(diemtb >= 5) { console.log('Trung bình'); }
+        else { console.log('Yếu'); }
+
+        let number;
+        if(number === 1) { console.log('Chủ nhật'); }
+        else if(number === 2) { console.log('Thứ 2'); }
+        else if(number === 3) { console.log('Thứ 3'); }
+        else if(number === 4) { console.log('Thứ 4'); }
+        else if(number === 5) { console.log('Thứ 5'); }
+        else if(number === 6) { console.log('Thứ 6'); }
+        else if(number === 7) { console.log('Thứ 7'); }
+        else { console.log('Sai'); }
+
+        // Khi cảm thấy điều kiện so sánh bằng thì nên dùng switch - case ( === )
+        // switch(biểu thức) { case giá_trị: { xử lý; break; } ; }
+        // LƯU Ý: biểu thức có thể là biến, biểu thức xử lý trả về giá trị, hàm trả về giá trị
+        number = 2.5;
+        switch(number) {
+            case 1: console.log('Chủ nhật'); break;
+            case 2.5: console.log('Thứ 2'); break;
+            case 3: console.log('Thứ 3'); break;
+            case '4': console.log('Thứ 4'); break;
+            case 5: console.log('Thứ 5'); break;
+            case 6: console.log('Thứ 6'); break;
+            case 7: console.log('Thứ 7'); break;
+            default: console.log('Sai'); break; // Ko rơi vào case nào hết . Lưu ý khối này là khối có thể có hoặc không
+        }
+    </script>
+</body>
+</html>

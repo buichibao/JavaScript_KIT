@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Sử dụng vòng lặp for khi biết trước số lần lặp
+
+        // Sử dụng vòng lặp while khi chưa biết trước số lần lặp
+        // CP: while(điều_kiện) { xử lý lặp đi lặp lại }
+        // LƯU Ý: điều kiện này trả về true sẽ lặp còn false dừng vòng lặp => biến, biểu thức, hàm, so sánh
+        // while (true) {
+
+        // }
+        // Giống với for
+        // for (let i = 0; i < 10; i++) { }
+        // for (let i = 0; i < 10; i++) { }
+        // let i = 0;
+        // while (i < 10) {
+        //     console.log(i);
+        //     i++;
+        // }
+        /* Trường hợp for và while đều biết trước số lần lặp:
+            - Sử dụng for khi không cần biến bắt đầu chạy vòng lặp để sử dụng lại
+            - Sử dụng while khi cần dùng lại biến bắt đầu chạy */
+        // let j = 10;
+        // while ((j - i) < 10) {
+
+        // }
+
+        // Vòng lặp do-while giống vòng lặp while chỉ khác biệt là chạy trước xử lý lặp 1 lần
+        // do { xử lý lặp đi lặp lại }
+        // while(điều kiện);
+        let check = true;
+        do {
+            console.log('HIHI ĐỒ NGỐC');
+            check = false;
+        } while (check);
+
+        // for-in dùng cho object (học sau ở bài object)
+        // for-of dùng để lặp qua các giá trị của 1 dữ liệu thuộc kiểu object (array, object..)
+        // Cú pháp: for(biến_tham_chiếu_giá_trị_của đổi_tượng of đối_tượng) { xử lý }
+        const myArr = ['Nguyễn Văn A', 'Nguyễn Văn B', 'Lê Thị C'];
+        for (let item of myArr) {
+            console.log(item);
+        }
+        let index = 0;
+        const students = [['SV01', 'Nguyễn Văn A'], ['SV02', 'Lê Thị B']];
+        for(let item of students) {
+            console.log(`Mã: ${item[0]} - Tên: ${item[1]}`);
+        }
+
+    </script>
+</body>
+
+</html>

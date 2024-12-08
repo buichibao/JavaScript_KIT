@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        // Thuộc tính lenght trả về số lượng ký tự của chuỗi (hoặc trả về số lượng phần tử của mảng)
+        let str1 = 'Hello world';
+        console.log(str1.length);
+        // Lặp từng ký tự trong chuỗi
+        for (let i = 0; i < str1.length; i++) {
+            console.log(str1[i]);
+        }
+        console.log(str1[5]);
+
+        // Sử dụng với mảng dùng để duyệt qua tất cả phần tử của mảng
+        const myArr = ['Nguyễn Văn A', 'Nguyễn Văn B', 'Lê Thị C'];
+        console.log(myArr.length); // 3
+        for (let i = 0; i < myArr.length; i++) {
+            console.log(myArr[i]);
+        }
+
+        // HÀM DỰNG SẴN DÙNG CHO STRING
+
+        // Cắt chuỗi dùng hàm chuỗi.substring(vị trí bắt đầu, vị trí kết thúc) từ 1 chuỗi lớn và trả về chuỗi mới sau khi cắt
+        console.log(str1.substring(0, 5)); // Hello
+        // Cắt chuỗi dùng hàm chuỗi.substr(vị trí bắt đầu, số lượng ký tự muốn cắt tính từ vị trí bắt đầu) từ 1 chuỗi lớn và trả về chuỗi mới sau khi cắt
+        console.log(str1.substr(0, 5)); // Hello
+
+        // Nối chuỗi sử dụng hàm chuỗi.concat(chuỗi muốn nối thêm) trả về 1 chuỗi mới bao gồm các chuỗi đã nối lại
+        console.log(str1.concat(', My name is Kha'));
+
+        // In Hoa tất cả ký tự trong chuỗi 
+        console.log(str1.toUpperCase());
+        // In thường tất cả ký tự trong chuỗi 
+        console.log(str1.toLowerCase());
+
+        // Hàm tìm kiếm chuỗi con trong chuỗi đã có
+        // chuỗi.search(chuỗi con muốn tìm): trả về -1 khi không tìm thấy, nếu tìm thấy trả về vị trị đàu tiên tìm thấy chuỗi
+        console.log(str1.search('hihi')); // -1
+        console.log(str1.search('world')); // 6
+        let str2 = 'Hello world world world';
+        console.log(str2.search('world')); // 6
+
+        // Hàm tìm kiếm và thay thế ký tự trong chuỗi đã có
+        // chuỗi.replace(chuỗi tìm kiếm để thay thế, chuỗi mới để thay thế): trả về chuỗi mới sau khi đã thay thế nhưng không thay đổi chuỗi gốc ban đầu
+        // Lưu ý: nếu chuỗi tìm kiếm để thay thế xuất hiện nhiều lần trong chuỗi gốc thì nó chỉ thay thế chuỗi tìm thấy đầu tiên
+        console.log(str2.replace('world', 'Thế giới')); // Hello Thế giói world world
+        console.log(str2); // chuỗi ban đầu vẫn còn giữ nguyên
+        // Nếu muốn thay thế tất cả chuỗi tìm thấy có trong chuỗi ban đầu thì dùng hàm chuỗi.replaceAll(chuỗi tìm kiếm để thay thế, chuỗi mới để thay thế)
+        console.log(str2.replaceAll('world', 'Thế giới'));
+
+        // Hàm loại bỏ khoảng trắng (space) ở đầu và cuối chuỗi: chuỗi.trim()
+        console.log('        HIHI     ĐỒ NGỐC      ');
+        console.log(('        HIHI     ĐỒ NGỐC      ').trim());
+
+        // Hàm tìm kiếm ký tự tại vị trí chỉ định: chuỗi.charAt(vị trí);
+        console.log(str1.charAt(4)); // o
+
+
+        // HÀM SỬ DỤNG CHO NUMBER
+        // Hàm kiểm tra giá trị có phải là số nguyên hay không: Number.isInteger(giá trị cần kiểm tra)
+        // Trả về true khi là số nguyên, ngược lại không phải là số nguyên
+        console.log(Number.isInteger('Hello')); // false
+        console.log(Number.isInteger('5')); // false
+        console.log(Number.isInteger(5)); // true
+        console.log("\n"); 
+
+        // Hàm kiểm tra giá trị có bị NaN(Not A Number) hay không: isNaN(giá trị cần kiểm tra)
+        // Trả về true khi giá trị không phải là số, false khi là số
+        console.log(isNaN('Hello')); // true
+        console.log(isNaN('5')); // false
+        console.log(isNaN(5)); // false
+
+        // Hàm làm tròn số sau đó chuyển kiểu dữ liệu của giá trị về string. 
+        // Cú pháp: số_cần_chuyển.toFixed(x); Trong đó x là số lượng số thập phân
+        /* Lưu ý: 
+            - x không có thì sẽ tự động làm tròn thành số nguyên sau để chuyển về chuỗi
+            - x bé hơn số lượng thập phân của số cần chuyển thì sẽ tự động làm tròn số và sau đó chuyển về chuỗi
+            - x lớn hơn số lượng thập phân của số cần chuyển thì sẽ tự động thêm số 0 vào và sau đó chuyển về chuỗi
+        */
+        let num1 = 56.12356;
+        console.log(num1.toFixed() + ', kiểu dữ liệu: ' + typeof (num1.toFixed())); // 56 <=> truyền vào 0
+        console.log(num1.toFixed(3) + ', kiểu dữ liệu: ' + typeof (num1.toFixed())); //56.124 
+        console.log(num1.toFixed(10) + ', kiểu dữ liệu: ' + typeof (num1.toFixed())); // 56.1235600000
+        console.log('\n');
+
+        // Hàm làm tròn số sau đó chuyển kiểu dữ liệu của giá trị về string.
+        // Cú pháp: số_cần_chuyển.toPrecision(x); x là số lượng số thập phân
+        /* Lưu ý: 
+            - x không có thì sẽ giữ nguyên số đó và chuyển về string
+            - x bé hơn số lượng chữ số của số cần chuyển thì nó sẽ lấy tính từ số nguyên và sau đó chuyển về string
+            - x lớn hơn số lượng chữ số của số cần chuyển thì sẽ tự động thêm số 0 vào và sau đó chuyển về string
+        */
+        console.log(num1.toPrecision() + ', kiểu dữ liệu: ' + typeof (num1.toPrecision())); // 56.12356
+        console.log(num1.toPrecision(4) + ', kiểu dữ liệu: ' + typeof (num1.toPrecision())); //56.12
+        console.log(num1.toPrecision(10) + ', kiểu dữ liệu: ' + typeof (num1.toPrecision())); //56.12356000
+
+        const arr = ['An', 'Tuấn', 'Bình'];
+        console.log(arr[0] > arr[1]); // false
+        console.log(arr[0] > arr[2]); // false
+        console.log(arr[1] > arr[2]); // true
+        // SỬ DỤNG CHO PHẦN SẮP XẾP THEO TÊN
+
+        // Thuật toán sắp xếp
+        for(let i = 0; i < 5; i++) {
+            for(let j = i + 1; j < 5; j++) {
+                // Xử lý if else để thay đổi vị trí
+                // Có thêm biến temp để gán ngược
+            }
+        }
+    </script>
+</body>
+
+</html> 

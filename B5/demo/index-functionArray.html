@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Vòng lặp foreach để lặp mảng
+        // Cú pháp: tên_mảng.foreach(function(biến tham chiếu từng phần tử trong mảng[, vị trí của phần tử])) { Xử lý }
+        const arr1 = ['Nguyễn Văn A', 'Lê Thị B'];
+        if(arr1.length > 0) {
+            arr1.forEach(function(item) {
+                console.log(item);
+            }); 
+            arr1.forEach(function(item, index) {
+                console.log(`Vị trí: ${index} - ${item}`);
+            }); 
+        }
+        function lapArr(phanTu, viTri) {
+            console.log(`Vị trí: ${viTri} - ${phanTu}`);
+        }
+        const arr2 = [arr1, [1, 2, 3, 2, 6]];
+        if(arr2.length > 0) {
+            arr2.forEach(lapArr);
+        }
+
+        // Sắp xếp đầy đủ
+        // Sắp xếp chữ cái từ z - a
+        const arr3 = ['C', 'T', 'B', 'A'];
+        console.log(arr3.sort()); // Từ bé đến lớn
+        console.log(arr3.reverse()); // Từ lớn đến bé
+
+        // Sắp xếp với số
+        const arr4 = [1, 8, 12, 2, 21, 33, 6];
+        console.log(arr4.sort(function(number1, number2) {
+            return number2 - number1; // Từ lớn đến bé
+        }));
+        console.log(arr4.sort(function(number1, number2) {
+            return number1 - number2; // Từ bé đến lớn
+        }));
+        console.log(arr4.sort(function(number1, number2) {
+            if(number1 > number2) return true;
+        }));
+    </script>
+</body>
+</html>

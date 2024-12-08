@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name1 = 'Nguyễn Văn a';
+        let name2 = 'Nguyễn Văn B';
+        let name3 = 'Lê Thị C';
+
+        // CRUD (Create, Read, Update, Delete) 
+        // Sử dụng Array để lưu trữ tập hợp nhiều giá trị
+        // Tạo mảng
+        // Không biết giá trị
+        // Khai báo trước
+        // C1: tạo theo đối tượng array
+        const arr1 = new Array();
+        // C2: tạo bằng ngoặc []
+        const arr2 = [];
+        // Gán giá trị sau
+        
+        // Biết trước các giá trị
+        // C1:
+        const arr3 = new Array('Nguyễn Văn A', 'Nguyễn Văn B', 'Lê Thị C');
+        // C2:
+        const arr4 = ['Nguyễn Văn A', 'Nguyễn Văn B', 'Lê Thị C'];
+
+        // Lấy dữ liệu đầu ra từ mảng (Read)
+        // CP: tên_mảng[vị trí];
+        // alert(arr4);
+        // document.write(arr4);
+        console.log(arr4);
+        console.log(arr4[2]); // Lê thị c
+
+        // Gán dữ liệu (Create)
+        // CP: tên_mảng[vị trí] = giá_trị;
+        arr2[0] = 'NGuyễn Văn Tèo';
+        console.log(arr2[0]);   
+
+        // Sửa lại giá trị đã lưu trong mảng (Update)
+        // Trong mảng của JS để sửa giá trị chỉ cần đè giá trị mới tại vị trí đã có
+        arr2[0] = 'Mộng Mơ';
+        console.log(arr2[0]);
+
+        // Xóa giá trị đã lưu (Delete) => Sử dụng hàm
+        arr2[0] = null;
+        console.log(arr2[0]);
+    </script>
+</body>
+</html>

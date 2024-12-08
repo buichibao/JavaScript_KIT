@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Toán tử gán: =, +=, -=, *=, /=, %=
+        // +=
+        let var1 = 10;
+        var1 += 5; // var1 = var1 + 5;
+        var1 -= 5; // var1 = var1 - 5;
+
+        // Toán tử số học: +, -, *, / (chia lấy thương => kết quả), % (chia lấy dư), ++ (tăng 1 đơn vị), --(giảm 1 đơn vị)
+        let var2 = 5;
+        var2++; // var2 = var2 + 1 
+        var2--; // var2 = var2 - 1
+
+        // Toán tử logic: && (và), || (hoặc), ! (phủ định) => chỉ dùng cho câu lệnh điều kiện
+        // Toán tử so sánh: >, <, ==, !=, >=, <=, ===, !==
+        // == và !=: bằng nhau và khác nhau về giá trị
+        '5' == 5; // đúng
+        '6' == 5; // sai 
+        
+        // === và !==: bằng nhau và khác nhau về giá trị và bắt buộc cùng kiểu dữ liệu
+        
+        '5' === 5; // sai => vì khác kiểu dữ liệu
+        5 === 5; // đúng
+
+
+        // KHI TÍNH TOÁN PHỨC TẠP THÌ NÊN DÙNG THÊM CÁC HÀM CỦA MATH (Chỉ dùng với number)
+        // Tìm số lớn nhất Math.max(danh sách các giá trị) và bé nhất Math.min(danh sách các giá trị)
+        console.log(Math.max(1, 5, -2, 8)); // 8
+        console.log(Math.min(1, 5, -2, 8)); // -2
+        console.log(Math.max('Nguyễn Văn A', 'Bành Thị B', 'Lê Thị D')); // LỖI
+        // Căn bậc 2: sqrt(Giá trị)
+        console.log(Math.sqrt(64)); // 8
+        // Lũy thừa: pow(x, y); x lũy thừa y
+        console.log(Math.pow(5, 2)); // 25
+        // Làm tròn số:
+        // Math.round(số thập phân): làm tròn về số nguyên gần nhất
+        console.log(Math.round(5.5)); // >= 5 => làm tròn lên, ngược lại làm tròn xuống
+        // Math.ceil(số thập phân): làm tròn lên
+        console.log(Math.ceil(5.1)); // 6
+        // Math.floor(số thập phân): làm tròn xuống
+        console.log(Math.floor(5.8)); // 5
+        // Math.trunc(số thập phân): loại bỏ phần thập phân chỉ giữ phần nguyên
+        console.log(Math.trunc(5.2)); // 5
+    </script>
+</body>
+
+</html>
